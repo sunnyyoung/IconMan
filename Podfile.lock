@@ -1,0 +1,21 @@
+PODS:
+  - SYFlatButton (1.0)
+
+DEPENDENCIES:
+  - SYFlatButton (from `https://github.com/Sunnyyoung/SYFlatButton.git`)
+
+EXTERNAL SOURCES:
+  SYFlatButton:
+    :git: https://github.com/Sunnyyoung/SYFlatButton.git
+
+CHECKOUT OPTIONS:
+  SYFlatButton:
+    :commit: 8d14e6078bb3ac2ef472e52d8f15f2b047140bf1
+    :git: https://github.com/Sunnyyoung/SYFlatButton.git
+
+SPEC CHECKSUMS:
+  SYFlatButton: 62b5950ce7bd536184d296551442d72651bbf053
+
+PODFILE CHECKSUM: 36417a2d2e93bdc4036c5fc167635b686b8e38fc
+
+COCOAPODS: 1.0.1

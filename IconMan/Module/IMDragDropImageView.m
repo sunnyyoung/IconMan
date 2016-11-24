@@ -31,22 +31,15 @@
 #pragma mark - Dragging Destination Delegate
 
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
-    self.image = [NSImage imageNamed:@"Drag.Entered"];
-    return NSDragOperationCopy;
+    if ([NSImage canInitWithPasteboard:sender.draggingPasteboard] && sender.draggingSourceOperationMask & NSDragOperationCopy) {
+        self.image = [NSImage imageNamed:@"Drag.Entered"];
+        return NSDragOperationCopy;
+    }
+    return NSDragOperationNone;
 }
 
 - (void)draggingExited:(id<NSDraggingInfo>)sender {
     self.image = [NSImage imageNamed:@"Drag.Exited"];
-}
-
-- (void)draggingEnded:(id<NSDraggingInfo>)sender {
-    if (sender.draggedImage == nil) {
-        self.image = [NSImage imageNamed:@"Drag.Exited"];
-    }
-}
-
-- (BOOL)isFlipped {
-    return YES;
 }
 
 @end

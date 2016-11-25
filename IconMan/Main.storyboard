@@ -19,17 +19,12 @@
                                         <menuItem title="About IconMan" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                                <segue destination="1tr-FN-Rcr" kind="show" id="U3Q-jY-LGa"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
-                                        <menuItem title="Services" id="NMo-om-nkz">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
                                         <menuItem title="Hide IconMan" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
@@ -60,11 +55,6 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="bib-Uj-vzu">
                                     <items>
-                                        <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
-                                            <connections>
-                                                <action selector="newDocument:" target="Ady-hI-5gd" id="4Si-XN-c54"/>
-                                            </connections>
-                                        </menuItem>
                                         <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
                                             <connections>
                                                 <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
@@ -87,21 +77,6 @@
                                         <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                             <connections>
                                                 <action selector="performClose:" target="Ady-hI-5gd" id="HmO-Ls-i7Q"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Save…" keyEquivalent="s" id="pxx-59-PXV">
-                                            <connections>
-                                                <action selector="saveDocument:" target="Ady-hI-5gd" id="teZ-XB-qJY"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Save As…" keyEquivalent="S" id="Bw7-FT-i3A">
-                                            <connections>
-                                                <action selector="saveDocumentAs:" target="Ady-hI-5gd" id="mDf-zr-I0C"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Revert to Saved" keyEquivalent="r" id="KaW-ft-85H">
-                                            <connections>
-                                                <action selector="revertDocumentToSaved:" target="Ady-hI-5gd" id="iJ3-Pv-kwq"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -137,21 +112,10 @@
                                                 <action selector="paste:" target="Ady-hI-5gd" id="UvS-8e-Qdg"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Paste and Match Style" keyEquivalent="V" id="WeT-3V-zwk">
-                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="pasteAsPlainText:" target="Ady-hI-5gd" id="cEh-KX-wJQ"/>
-                                            </connections>
-                                        </menuItem>
                                         <menuItem title="Delete" id="pa3-QI-u2k">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="delete:" target="Ady-hI-5gd" id="0Mk-Ml-PaM"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Select All" keyEquivalent="a" id="Ruw-6m-B2m">
-                                            <connections>
-                                                <action selector="selectAll:" target="Ady-hI-5gd" id="VNm-Mi-diN"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -210,17 +174,94 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="206"/>
+            <point key="canvasLocation" x="-308" y="295"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9kD-Di-hwN">
+            <objects>
+                <viewController id="kZR-gm-3ox" sceneMemberID="viewController">
+                    <view key="view" id="LSj-Gm-ZfG">
+                        <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="pU4-qJ-aIK">
+                                <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SNk-wg-QMR">
+                                        <rect key="frame" x="14" y="16" width="228" height="34"/>
+                                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Copyright © 2016年 Sunnyyoung. All rights reserved." id="DzI-eG-AaT">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KbM-ml-u7L">
+                                        <rect key="frame" x="64" y="96" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KbM-ml-u7L" secondAttribute="height" multiplier="1:1" id="dV2-Kv-WK9"/>
+                                            <constraint firstAttribute="height" constant="128" id="eV2-7S-Eg4"/>
+                                        </constraints>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="About" id="2k4-Hs-gbW"/>
+                                    </imageView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6E9-9v-15B">
+                                        <rect key="frame" x="100" y="69" width="56" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="IconMan" id="W11-pQ-qMY">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="SNk-wg-QMR" secondAttribute="trailing" constant="16" id="CZH-7n-MkB"/>
+                                    <constraint firstAttribute="bottom" secondItem="SNk-wg-QMR" secondAttribute="bottom" constant="16" id="DH7-0s-n1H"/>
+                                    <constraint firstItem="KbM-ml-u7L" firstAttribute="top" secondItem="pU4-qJ-aIK" secondAttribute="top" constant="32" id="IHg-6E-Vfi"/>
+                                    <constraint firstItem="SNk-wg-QMR" firstAttribute="leading" secondItem="pU4-qJ-aIK" secondAttribute="leading" constant="16" id="c02-i5-pCV"/>
+                                    <constraint firstItem="6E9-9v-15B" firstAttribute="centerX" secondItem="KbM-ml-u7L" secondAttribute="centerX" id="cRx-F8-iMG"/>
+                                    <constraint firstItem="6E9-9v-15B" firstAttribute="top" secondItem="KbM-ml-u7L" secondAttribute="bottom" constant="10" id="rwH-Yc-Skc"/>
+                                    <constraint firstItem="KbM-ml-u7L" firstAttribute="centerX" secondItem="pU4-qJ-aIK" secondAttribute="centerX" id="y92-Kc-aC7"/>
+                                </constraints>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="pU4-qJ-aIK" firstAttribute="top" secondItem="LSj-Gm-ZfG" secondAttribute="top" id="418-j5-2Oa"/>
+                            <constraint firstAttribute="bottom" secondItem="pU4-qJ-aIK" secondAttribute="bottom" id="9gb-ru-p2P"/>
+                            <constraint firstAttribute="trailing" secondItem="pU4-qJ-aIK" secondAttribute="trailing" id="Ca4-0Q-tsD"/>
+                            <constraint firstItem="pU4-qJ-aIK" firstAttribute="leading" secondItem="LSj-Gm-ZfG" secondAttribute="leading" id="ihX-Gp-daQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="PfJ-6W-qeh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="669"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="tNN-6c-6n9">
+            <objects>
+                <windowController id="1tr-FN-Rcr" customClass="IMWindowController" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="XHq-3j-p3C">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES"/>
+                        <rect key="contentRect" x="1500" y="587" width="256" height="256"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+                    </window>
+                    <connections>
+                        <segue destination="kZR-gm-3ox" kind="relationship" relationship="window.shadowedContentViewController" id="hHz-eO-dEC"/>
+                    </connections>
+                </windowController>
+                <customObject id="UWc-Jc-50X" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="295"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="IMMainViewController" sceneMemberID="viewController">
-                    <view key="view" id="l1U-LI-Mqg" customClass="IMBaseView">
+                    <view key="view" id="l1U-LI-Mqg">
                         <rect key="frame" x="0.0" y="0.0" width="256" height="326"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="CV8-TF-Q6b">
+                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="CV8-TF-Q6b">
                                 <rect key="frame" x="0.0" y="296" width="256" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NXv-wT-wpa"/>
@@ -297,7 +338,7 @@
                                     <action selector="generateAction:" target="XfG-lQ-9wD" id="nrI-Eu-goi"/>
                                 </connections>
                             </button>
-                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="vH9-nW-070">
+                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="vH9-nW-070">
                                 <rect key="frame" x="0.0" y="40" width="256" height="40"/>
                                 <subviews>
                                     <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-Nm-Ygs">
@@ -333,11 +374,6 @@
                             <constraint firstItem="CV8-TF-Q6b" firstAttribute="top" secondItem="l1U-LI-Mqg" secondAttribute="top" id="slw-J5-pQ0"/>
                             <constraint firstAttribute="trailing" secondItem="vH9-nW-070" secondAttribute="trailing" id="u0k-pz-Mi8"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                <color key="value" red="0.13305032253265381" green="0.14090478420257568" blue="0.15347516536712646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="J8c-hJ-Bl5" id="Tlk-XM-p0t"/>
@@ -346,10 +382,11 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="620"/>
+            <point key="canvasLocation" x="-308" y="709"/>
         </scene>
     </scenes>
     <resources>
+        <image name="About" width="280" height="280"/>
         <image name="Drag.Exited" width="256" height="256"/>
     </resources>
 </document>

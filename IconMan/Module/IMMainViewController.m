@@ -17,7 +17,9 @@
 @property (strong) NSArray<Icon *> *iOSIconArray;
 @property (strong) NSArray<Icon *> *macOSIconArray;
 @property (strong) NSArray<Icon *> *watchOSArray;
-@property (weak) IBOutlet NSSegmentedControl *platformSegmentControl;
+@property (assign) NSUInteger selectedIndex;
+@property (weak) IBOutlet NSSegmentedControl *viewControllerSegmentControl;
+@property (weak) IBOutlet NSSegmentedControl *touchbarSegmentControl;
 
 @end
 
@@ -58,6 +60,15 @@
     }];
 }
 
+- (IBAction)switchPlatformAction:(NSSegmentedControl *)sender {
+    if (sender == self.viewControllerSegmentControl) {
+        self.touchbarSegmentControl.selectedSegment = sender.selectedSegment;
+    } else {
+        self.viewControllerSegmentControl.selectedSegment = sender.selectedSegment;
+    }
+    self.selectedIndex = sender.selectedSegment;
+}
+
 #pragma mark - Property method
 
 - (NSOpenPanel *)openPanel {
@@ -69,7 +80,7 @@
 }
 
 - (NSArray<Icon *> *)selectedIconArray {
-    NSUInteger selectedIndex = self.platformSegmentControl.selectedSegment;
+    NSUInteger selectedIndex = self.selectedIndex;
     if (selectedIndex == 0) {
         return self.iOSIconArray;
     } else if (selectedIndex == 1) {

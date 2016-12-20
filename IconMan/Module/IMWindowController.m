@@ -16,8 +16,17 @@
 
 - (void)windowDidLoad {
     [super windowDidLoad];
+    [self setupTitle];
+    [self setupButton];
+    [self setupTouchBar];
+}
+
+- (void)setupTitle {
     self.window.titleVisibility = NSWindowTitleHidden;
     self.window.titlebarAppearsTransparent = YES;
+}
+
+- (void)setupButton {
     NSButton *closeButton = [self.window standardWindowButton:NSWindowCloseButton];
     NSButton *zoomButton = [self.window standardWindowButton:NSWindowZoomButton];
     NSButton *minimizeButton = [self.window standardWindowButton:NSWindowMiniaturizeButton];
@@ -30,6 +39,10 @@
     CGRect minimizeButtonFrame = minimizeButton.frame;
     minimizeButtonFrame.origin.y = -2;
     minimizeButton.frame = minimizeButtonFrame;
+}
+
+- (void)setupTouchBar {
+    [self bind:@"touchBar" toObject:self.contentViewController withKeyPath:@"touchBar" options:nil];
 }
 
 @end

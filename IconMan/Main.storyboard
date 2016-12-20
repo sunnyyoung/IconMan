@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="7104"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="the Touch Bar" message="Use a version of macOS with Touch Bar support." minToolsVersion="8.1" minSystemVersion="10.12.1" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -161,10 +163,10 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="IMWindowController" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="IconMan" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
                         <rect key="contentRect" x="196" y="240" width="256" height="256"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
                         <value key="minSize" type="size" width="256" height="256"/>
                         <value key="maxSize" type="size" width="256" height="256"/>
                     </window>
@@ -233,13 +235,13 @@
                 </viewController>
                 <customObject id="PfJ-6W-qeh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="669"/>
+            <point key="canvasLocation" x="74" y="678"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="tNN-6c-6n9">
             <objects>
                 <windowController id="1tr-FN-Rcr" customClass="IMWindowController" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="XHq-3j-p3C">
+                    <window key="window" title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="XHq-3j-p3C">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES"/>
                         <rect key="contentRect" x="1500" y="587" width="256" height="256"/>
@@ -351,6 +353,9 @@
                                                 <segment label="watchOS"/>
                                             </segments>
                                         </segmentedCell>
+                                        <connections>
+                                            <action selector="switchPlatformAction:" target="XfG-lQ-9wD" id="Q5D-T9-3BQ"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <constraints>
@@ -375,14 +380,54 @@
                             <constraint firstAttribute="trailing" secondItem="vH9-nW-070" secondAttribute="trailing" id="u0k-pz-Mi8"/>
                         </constraints>
                     </view>
+                    <touchBar key="touchBar" id="sBJ-Iw-8Mw">
+                        <touchBarItems>
+                            <touchBarItem id="uAN-lm-oOE">
+                                <viewController key="viewController" id="62H-8y-Eby">
+                                    <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TiN-ZE-joT">
+                                        <rect key="frame" x="0.0" y="0.0" width="219" height="30"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="Jlh-aC-78c">
+                                            <font key="font" metaFont="system" size="15"/>
+                                            <segments>
+                                                <segment label="iOS" selected="YES"/>
+                                                <segment label="macOS" tag="1"/>
+                                                <segment label="watchOS"/>
+                                            </segments>
+                                        </segmentedCell>
+                                        <connections>
+                                            <action selector="switchPlatformAction:" target="XfG-lQ-9wD" id="MI2-JL-chk"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </viewController>
+                                <size key="designTimeSize" width="219" height="30"/>
+                            </touchBarItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="Dpg-Hb-N4Q"/>
+                            <touchBarItem id="U8q-Dd-fOt">
+                                <viewController key="viewController" id="Urj-Bd-IwL">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KFL-iz-J7h">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Lsj-84-df7">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="15"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="generateAction:" target="XfG-lQ-9wD" id="RGB-Ks-gjS"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="90" height="30"/>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
                     <connections>
                         <outlet property="imageView" destination="J8c-hJ-Bl5" id="Tlk-XM-p0t"/>
-                        <outlet property="platformSegmentControl" destination="Odg-Nm-Ygs" id="pjw-RJ-YdN"/>
+                        <outlet property="touchbarSegmentControl" destination="TiN-ZE-joT" id="mrN-2Z-Ho2"/>
+                        <outlet property="viewControllerSegmentControl" destination="Odg-Nm-Ygs" id="v5y-Ap-8rP"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-308" y="709"/>
+            <point key="canvasLocation" x="-308" y="713"/>
         </scene>
     </scenes>
     <resources>

@@ -2,6 +2,7 @@
 
 ![License MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Platform info](https://img.shields.io/badge/platform-macOS-lightgrey.svg)
+[![Build Status](https://travis-ci.org/Sunnyyoung/IconMan.svg?branch=master)](https://travis-ci.org/Sunnyyoung/IconMan)
 
 ## Description
 

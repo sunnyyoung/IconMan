@@ -240,7 +240,6 @@
 				TargetAttributes = {
 					7D7939831DDD842C002164BA = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = NXZYHHH37W;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -437,8 +436,9 @@
 			baseConfigurationReference = B8C10D4C4B48CD818D7DD5FC /* Pods-IconMan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = NXZYHHH37W;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IconMan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -452,8 +452,9 @@
 			baseConfigurationReference = 8F5287962CAB758C3A2B7581 /* Pods-IconMan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = NXZYHHH37W;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IconMan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;

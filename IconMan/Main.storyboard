@@ -243,7 +243,6 @@
                 <windowController id="1tr-FN-Rcr" customClass="IMWindowController" sceneMemberID="viewController">
                     <window key="window" title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="XHq-3j-p3C">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES"/>
                         <rect key="contentRect" x="1500" y="587" width="256" height="256"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
                     </window>

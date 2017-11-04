@@ -1,5 +1,5 @@
 PODS:
-  - SYFlatButton (1.0)
+  - SYFlatButton (1.4)
 
 DEPENDENCIES:
   - SYFlatButton (from `https://github.com/Sunnyyoung/SYFlatButton.git`)
@@ -10,12 +10,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SYFlatButton:
-    :commit: 8d14e6078bb3ac2ef472e52d8f15f2b047140bf1
+    :commit: bbfbd2742eec76b0b19f6cfc4b07ecb5c9544c61
     :git: https://github.com/Sunnyyoung/SYFlatButton.git
 
 SPEC CHECKSUMS:
-  SYFlatButton: 62b5950ce7bd536184d296551442d72651bbf053
+  SYFlatButton: 324d51dac27a15e6feb572c17a36f11b1ae5edd5
 
-PODFILE CHECKSUM: 36417a2d2e93bdc4036c5fc167635b686b8e38fc
+PODFILE CHECKSUM: d260398b4086074352ebf3652997704e21b1ba0a
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.3.1
